@@ -11,6 +11,7 @@ C++ project.
 ✨ Features
 
 -   ✅ Check if a number is positive, negative, or zero
+-   ✅ Verify Numbers
 -   ✅ Detect odd/even, prime, palindrome, perfect numbers
 -   ✅ Random number generation within a range
 -   ✅ Reverse numbers, sum digits, get fractional part
