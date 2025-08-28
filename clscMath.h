@@ -24,6 +24,56 @@ private:
 public:
 	
 	/*__________________________________ Definition Function _____________________________________*/
+	//================================== Set And Get Property======================================
+	int getIntNumber()
+	{
+		return _IntNumber;
+	}
+	void setIntNumber(int Number)
+	{
+		this->_IntNumber = Number;
+	}
+	__declspec(property(get = getIntNumber, put = setIntNumber))int IntNumber;
+
+	short getShortNumber()
+	{
+		return _ShortNumber;
+	}
+	void setShortNumber(short Number)
+	{
+		this->_ShortNumber = Number;
+	}
+	__declspec(property(get = getShortNumber, put = setShortNumber))short ShortNumber;
+
+	float getFloatNumber()
+	{
+		return this->_FloatNumber;
+	}
+	void setFloatNumber(float Number)
+	{
+		this->_FloatNumber = Number;
+	}
+	__declspec(property(get = getFloatNumber, put = setFloatNumber))float FloatNumber;
+
+	long long getLgLgNumber()
+	{
+		return _LgLgNumber;
+	}
+	void setLgLgNumber(long long  Number)
+	{
+		this->_LgLgNumber = Number;
+	}
+	__declspec(property(get = getLgLgNumber, put = setLgLgNumber))long long  LgLgNumber;
+
+	double getDoubleNumber()
+	{
+		return this->_DoubleNumber;
+	}
+	void setDoubleNumber(double Number)
+	{
+		this->_DoubleNumber = Number;
+	}
+	__declspec(property(get = getDoubleNumber, put = setDoubleNumber))double DoubleNumber;
 	//================================== Verify Numbers =============================================
 
 	static short VerifyNum(short Number)
@@ -734,5 +784,6 @@ public:
 
 
 };
+
 
 
