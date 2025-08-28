@@ -24,7 +24,63 @@ private:
 public:
 	
 	/*__________________________________ Definition Function _____________________________________*/
+	//================================== Verify Numbers =============================================
 
+	static short VerifyNum(short Number)
+	{
+		while (cin.fail())
+		{
+			cin.clear();
+			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			cout << "Invalid Number, Enter a valid one:" << endl;
+			cin >> Number;
+		}
+		return Number;
+	}
+	static int VerifyNum(int Number)
+	{
+		while (cin.fail())
+		{
+			cin.clear();
+			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			cout << "Invalid Number, Enter a valid one:" << endl;
+			cin >> Number;
+		}
+		return Number;
+	}
+	static float VerifyNum(float Number)
+	{
+		while (cin.fail())
+		{
+			cin.clear();
+			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			cout << "Invalid Number, Enter a valid one:" << endl;
+			cin >> Number;
+		}
+		return Number;
+	}
+	static double VerifyNum(double Number)
+	{
+		while (cin.fail())
+		{
+			cin.clear();
+			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			cout << "Invalid Number, Enter a valid one:" << endl;
+			cin >> Number;
+		}
+		return Number;
+	}
+	static long long VerifyNum(long long Number)
+	{
+		while (cin.fail())
+		{
+			cin.clear();
+			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			cout << "Invalid Number, Enter a valid one:" << endl;
+			cin >> Number;
+		}
+		return Number;
+	}
 	//================================== Is Positive =============================================
 	static bool IsPositive(int Number)
 	{
@@ -678,4 +734,5 @@ public:
 
 
 };
+
 
