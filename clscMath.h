@@ -8,11 +8,8 @@ class clscMath
 {
 
 private:
+
 	enum enPositiveNegativeZero { Positive = 1, Negative = -1, Zero = 0 };
-	enum enPrimeNotPrime { Prime = 1, NotPrime = 2 };
-	enum enPalindromNotPalindrom { Palindrom = 1, NotPalindrom = 2 };
-	enum enOddOrEven { Odd = 1, Even = 2 };
-	enum enPerfectNotPerfect { Perfect = 1, NotPerfect = 2 };
 	enum enOperatorType { Add = 1, Sub = 2, Mul = 3, Div = 4, Mode = 5 };
 
 	int _IntNumber=0;
@@ -23,7 +20,6 @@ private:
 
 public:
 	
-	/*__________________________________ Definition Function _____________________________________*/
 	//================================== Set And Get Property======================================
 	int getIntNumber()
 	{
@@ -74,6 +70,8 @@ public:
 		this->_DoubleNumber = Number;
 	}
 	__declspec(property(get = getDoubleNumber, put = setDoubleNumber))double DoubleNumber;
+
+
 	//================================== Verify Numbers =============================================
 
 	static short VerifyNum(short Number)
@@ -131,6 +129,7 @@ public:
 		}
 		return Number;
 	}
+
 	//================================== Is Positive =============================================
 	static bool IsPositive(int Number)
 	{
@@ -240,16 +239,16 @@ public:
 		return clscMath::IsZeroLgLg(_LgLgNumber);
 	}
 
-	static bool isLeapYear(short Year)
+	static bool IsLeapYear(short Year)
 	{
 		// if year is divisible by 4 AND not divisible by 100
 		// OR if year is divisible by 400
 		// then it is a leap year
 		return (Year % 4 == 0 && Year % 100 != 0) || (Year % 400 == 0);
 	}
-	bool isLeapYear(short Year)
+	bool IsLeapYear()
 	{
-		return clscMath::isLeapYear(_ShortNumber);
+		return clscMath::IsLeapYear(_ShortNumber);
 	}
 
 	static bool IsOdd(int Number)
@@ -306,7 +305,7 @@ public:
 				Sum += i;
 		return Number == Sum;
 	}
-	bool IsPerfect(int Number)
+	bool IsPerfect()
 	{
 		return clscMath::IsPerfect(_IntNumber);
 	}
@@ -589,64 +588,6 @@ public:
 	{
 		return clscMath::PositiveOrNegativeOrZero(_IntNumber);
 	}
-
-	static enPalindromNotPalindrom PalindromeNotPalindrome(int Number)
-	{
-		if (Number == ReverseNum(Number))
-			return enPalindromNotPalindrom::Palindrom;
-		else
-			return enPalindromNotPalindrom::NotPalindrom;
-	}
-	enPalindromNotPalindrom PalindromeNotPalindrome()
-	{
-		return clscMath::PalindromeNotPalindrome(_IntNumber);
-	}
-
-	static enPrimeNotPrime PrimeNotPrime(int Number)
-	{
-		int M = round(Number / 2);
-		for (int counter = 2; counter <= M; counter++)
-			if (Number % counter == 0)
-				return enPrimeNotPrime::NotPrime;
-		return enPrimeNotPrime::Prime;
-	}
-	enPrimeNotPrime PrimeNotPrime()
-	{
-		return clscMath::PrimeNotPrime(_IntNumber);
-	}
-
-	static enOddOrEven OddOrEven(int Number)
-	{
-		if (Number % 2 != 0)
-			return enOddOrEven::Odd;
-		else
-			return enOddOrEven::Even;
-
-	}
-	enOddOrEven OddOrEven()
-	{
-		return clscMath::OddOrEven(_IntNumber);
-	}
-
-	static enPerfectNotPerfect PerfectNotPerfect(int Number)
-	{
-		int Sum = 0;
-		int M = Number / 2;
-		for (int Counter = 1; Counter <= M; Counter++)
-		{
-			if (Number % Counter == 0)
-			{
-				Sum += Counter;
-				if (Sum == Number)
-					return enPerfectNotPerfect::Perfect;
-			}
-		}
-		return enPerfectNotPerfect::NotPerfect;
-	}
-	enPerfectNotPerfect PerfectNotPerfect(int Number)
-	{
-		return clscMath::PerfectNotPerfect(_IntNumber);
-	}
 	//===============================================================================================
 	static int Sum(int Num1, int Num2, int Num3 = 0, int Num4 = 0, int Num5 = 0)
 	{
@@ -784,6 +725,3 @@ public:
 
 
 };
-
-
-
