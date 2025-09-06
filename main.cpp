@@ -78,3 +78,61 @@ int main() {
 }
 
 
+================= clscMath Test Program =================
+
+-- Positivity Check --
+5 is positive? 1
+-3 is negative? 1
+0 is zero? 1
+
+-- Odd / Even --
+7 is odd? 1
+10 is even? 1
+
+-- Prime Check --
+7 is prime? 1
+12 is prime? 0
+
+-- Palindrome Check --
+121 is palindrome? 1
+123 is palindrome? 0
+
+-- Perfect Number Check --
+6 is perfect? 1
+10 is perfect? 0
+
+-- Reverse Number --
+Reverse of 1234: 4321
+
+-- Sum of Digits --
+Sum of digits of 1234: 10
+
+-- Number to Text --
+1234 in words: One Thousands Two Hundreds Thirty Four
+
+-- Basic Math Operations --
+Sum(5, 10, 15) = 30
+Subtract(50, 10, 5) = 35
+Multiplicate(2, 3, 4) = 24
+Divide(100, 2, 5) = 2
+Mode2Num(17, 5) = 2
+
+-- Utility Functions --
+ABS(-12) = 12
+Opposite(12) = -12
+Half(25) = 12.5
+
+-- Ceil / Floor / Round --
+Ceil(5.2) = 6
+Floor(5.9) = 5
+Round(5.5) = 6
+Round(-5.5) = -6
+
+-- Random Number (1-10) --
+4 9 2 7 10 
+
+================= End of Tests =================
+
+
+
+
